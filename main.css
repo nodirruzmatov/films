@@ -1,0 +1,28 @@
+.film_list {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.film-item {
+  padding: 10px;
+  border: 2px solid purple;
+}
+
+.film_pages {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.film_page {
+  padding: 3px;
+  border: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
