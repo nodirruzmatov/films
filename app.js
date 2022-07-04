@@ -19,7 +19,7 @@ elFilmPages.addEventListener("click", (ent) => {
 // todo: get data from backend
 const getMovuesData = async () => {
   const request = await fetch(
-    `http://www.omdbapi.com/?apikey=${API_KEY}&s=${srcName}&page=${page}`
+    `https://www.omdbapi.com/?apikey=${API_KEY}&s=${srcName}&page=${page}`
   );
 
   const data = await request.json();
