@@ -30,8 +30,6 @@ const getMovuesData = async () => {
     const pageNum = Math.ceil(data.totalResults / 10);
     addPage(pageNum, elFilmPages);
 
-    console.log(data);
-
     if (page === 1) {
       prevBtn.classList.add("hidden");
       nextBtn.classList.remove("hidden");
