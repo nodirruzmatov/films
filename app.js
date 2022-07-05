@@ -5,7 +5,7 @@ const elInput = document.querySelector(".input");
 const elFilmPages = document.querySelector(".film_pages");
 
 const API_KEY = "b1566df1";
-let srcName = "hulk";
+let srcName = "lego";
 let page = 1;
 
 // !----------
