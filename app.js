@@ -5,7 +5,7 @@ const elInput = document.querySelector(".input");
 const elFilmPages = document.querySelector(".film_pages");
 
 const API_KEY = "b1566df1";
-let srcName = "lego";
+let srcName = "hulk";
 let page = 1;
 
 // !----------
@@ -27,13 +27,17 @@ const getMovuesData = async () => {
   if (data.Response && data.totalResults > 0) {
     renderMovie(data.Search, elFilmList);
 
-    const pageNum = Math.ceil(data.totalResults / data.Search.length);
+    const pageNum = Math.ceil(data.totalResults / 10);
     addPage(pageNum, elFilmPages);
+
+    console.log(data);
 
     if (page === 1) {
       prevBtn.classList.add("hidden");
-    } else if (page === data.Search.length) {
+      nextBtn.classList.remove("hidden");
+    } else if (page === Math.ceil(data.totalResults / 10)) {
       nextBtn.classList.add("hidden");
+      prevBtn.classList.remove("hidden");
     } else {
       prevBtn.classList.remove("hidden");
       nextBtn.classList.remove("hidden");
